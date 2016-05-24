@@ -1,0 +1,33 @@
+{
+  "name": "kmkr-gtts",
+  "version": "1.0.0",
+  "main": "gtts.js",
+  "dependencies": {
+    "blueimp-md5": "~1.1.0",
+    "curlrequest": "~0.4.1",
+    "node-buzz": "~1.1.0",
+    "querystring": "~0.2.0",
+    "request": "~2.34.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "AppEx DevTeam"
+  },
+  "license": "Proprietary",
+  "description": "TTS module using Google Translate Service",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:rhee/kmkr-gtts.git"
+  },
+  "keywords": [
+    "tts"
+  ],
+  "readme": "ERROR: No README data found!",
+  "_id": "kmkr-gtts@1.0.0",
+  "dist": {
+    "shasum": "86af5aab10114dd21f7aa5f2bc58618f4988586c"
+  }
+}
