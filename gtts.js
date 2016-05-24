@@ -109,20 +109,6 @@ NOTE: node-webkit audio problem. need proprietary [lib]ffmpegsumo.* from google-
 
     if(!fs.existsSync(cachefile)){
 
-
-
-
-      // opts = {
-      //   url:"http://translate.google.com/translate_tts",
-      //   useragent:'Mozilla',
-      //   data:{
-      //     q:str,
-      //     ie:'UTF-8',
-      //     tl:'ko'
-      //   },
-      // 	encoding:null /* result as Buffer */
-      // };
-
       // curl.request(
       // 	opts,
       //   function(err,result){
@@ -138,8 +124,6 @@ NOTE: node-webkit audio problem. need proprietary [lib]ffmpegsumo.* from google-
       //     this._playAudio(cachefile,callback);
       //   }.bind(this));
 
-
-
       params = {
         q:str,
         ie:'UTF-8',
@@ -149,16 +133,14 @@ NOTE: node-webkit audio problem. need proprietary [lib]ffmpegsumo.* from google-
       request(
 	{
 	  url:'http://translate.google.com/translate_tts'+'?'+qs.stringify(params),
-	  //url:config.url_auth+'/ttt/tts'+'?'+qs.stringify(params),
 	  headers:{
-            'User-Agent':'Mozilla'
+	    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36'
 	  }
 	}
       ).pipe(fs.createWriteStream(cachefile))
 	.on('close'/*'end'*/,function(){
           this._playAudio(cachefile,callback);
 	}.bind(this));
-
 
     }else{
       this._playAudio(cachefile,callback);
