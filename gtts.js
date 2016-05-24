@@ -167,11 +167,12 @@ NOTE: node-webkit audio problem. need proprietary [lib]ffmpegsumo.* from google-
 
   gtts.prototype.say = function (strlist){
     if(strlist.length>0){
-      this._playAudio(silence,function(err){
+      var me = this;
+      me._playAudio(silence,function(err){
 	var first=strlist[0],rest=strlist.slice(1);
-	this._say(first,function(err){
-	  this.say(rest);
-	}.bind(this));
+	me._say(first,function(err){
+	  me.say(rest);
+	});
       });
     }
   };
